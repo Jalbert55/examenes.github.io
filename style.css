@@ -322,6 +322,35 @@ main {
   /* Ajusta el relleno según tus necesidades */
 }
 
+#togglePassword {
+  width: 50px;
+  height: 50px;
+}
+
+.password-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.password-container input {
+  flex: 1; /* El input ocupará todo el espacio disponible */
+}
+
+.password-container button {
+  margin-left: 10px; /* Espacio entre el input y el botón */
+}
+
+/* Media query para ajustar estilos en dispositivos móviles */
+@media (max-width: 768px) {
+  .password-container {
+    flex-direction: row; /* Apila los elementos verticalmente */
+  }
+
+  .password-container button {
+    margin-left: 0; /* Elimina el margen entre el input y el botón */
+    margin-top: 10px; /* Agrega espacio entre el input y el botón */
+  }
+
 .navbar-nav {
   display: flex;
   align-items: center;
