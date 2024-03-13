@@ -1,0 +1,357 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.botn-link {
+  font-weight: 400;
+  color: white !important;
+  text-decoration: underline;
+  border: none;
+  outline: none;
+}
+
+.collapse p {
+  color: white;
+}
+
+.botn-link:focus,
+.botn-link:active {
+  text-decoration: underline;
+  color: white;
+}
+
+main {
+  min-height: 100vh;
+  padding: 1rem 2rem;
+  flex: 1;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.div {
+  background-color: #ff0000;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 80px; 
+  min-height: 100vh;
+}
+
+
+.div-2 {
+  border-radius: 52px;
+  background-blend-mode: normal;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 5px 5px 5px 5px;
+}
+
+@media (max-width: 991px) {
+  .div-2 {
+    max-width: 100%;
+    padding-right: 20px;
+  }
+}
+
+.img {
+  aspect-ratio: 1.11;
+  object-fit: auto;
+  object-position: center;
+  width: 156px;
+  max-width: 100%;
+}
+
+.div-3 {
+  border-radius: 92px;
+  background-color: #00315F;
+  align-self: center;
+  display: flex;
+  margin-top: 56px;
+  width: 669px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: #fff;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 80px 60px;
+}
+
+@media (max-width: 991px) {
+  .div-3 {
+    margin-top: 40px;
+    white-space: initial;
+    padding: 0 20px;
+  }
+}
+
+.div-4 {
+  display: flex;
+  width: 468px;
+  max-width: 100%;
+  flex-direction: column;
+  margin: 25px 0 26px;
+}
+
+@media (max-width: 991px) {
+  .div-4 {
+    white-space: initial;
+  }
+}
+
+.div-5 {
+  font-family: Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .div-5 {
+    max-width: 100%;
+  }
+}
+
+.div-7 {
+  margin-top: 31px;
+  font: 32px Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .div-7 {
+    max-width: 100%;
+  }
+}
+
+.div-9 {
+  z-index: 10;
+  align-self: center;
+  margin-top: 72px;
+}
+
+.div-6 input,
+.div-8 input,
+.div-9 button {
+  border-radius: 8px;
+  /* Puedes ajustar este valor según tus preferencias */
+  padding: 8px;
+  /* Añadir un relleno para mejorar el aspecto visual */
+  width: 100%;
+  /* Asegurar que los elementos ocupen todo el ancho del contenedor */
+  box-sizing: border-box;
+  /* Incluir el relleno y el borde en el ancho total del elemento */
+}
+
+.div-9 button {
+  background-color: #96BB7C;
+  /* Cambiar el color del botón según tus preferencias */
+  color: white;
+  /* Cambiar el color del texto del botón */
+  border: none;
+  /* Eliminar el borde del botón */
+}
+
+.modal-content {
+  width: 735px !important;
+}
+
+.modal-dialog {
+  max-width: 735px !important;
+  margin: 1.75rem auto !important;
+  padding: 0 !important;
+}
+
+.drop-area {
+  border: 5px dashed #ddd;
+  height: 500px;
+  width: 700px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.drop-area.active {
+  background-color: #b8d4fe;
+  color: black;
+  border: 2px dashed #618ac9;
+}
+
+.drop-area h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+}
+
+.drop-area span {
+  font-size: 25px;
+  color: #000;
+}
+
+.drop-area button {
+  padding: 10px 25px;
+  font-size: 20px;
+  border: 0;
+  outline: none;
+  background-color: #5256ad;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.file-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#preview {
+  margin-top: 10px;
+}
+
+.status-text {
+  padding: 0 10px;
+}
+
+.success {
+  color: #52ad5a;
+}
+
+.failure {
+  color: #ff0000;
+}
+
+.align-space-evenly-grid {
+  width: 100%;
+  display: grid;
+  gap: 5px;
+  margin: 10px;
+}
+
+.my-cell {
+  border: 2px dashed #aa3333;
+  margin: 0;
+  background-color: #00315F;
+}
+
+.my-cell .collapse {
+  padding: 10px;
+  /* Ajusta el relleno según tus necesidades */
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item:first-child {
+  margin-right: auto;
+}
+
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-usuario {
+  left: -65px !important;
+}
+
+@media (max-width: 991px) {
+  .div-9 {
+    white-space: initial;
+    padding-left: 20px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
