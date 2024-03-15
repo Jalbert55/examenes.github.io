@@ -1,5 +1,3 @@
-import bcrypt from 'bcryptjs'; // Importa bcryptjs
-
 async function iniciarSesion() {
   const usuario = document.getElementById("usuarioInput").value;
   const contrasena = document.getElementById("contrasenaInput").value;
@@ -9,21 +7,23 @@ async function iniciarSesion() {
     return;
   }
 
-  // Encripta la contraseña con bcrypt
-  const hashedPassword = await bcrypt.hash(contrasena, 12);
-
   try {
     const response = await fetch('login.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: `usuario=${encodeURIComponent(usuario)}&contrasena=${encodeURIComponent(hashedPassword)}`,
+      body: `usuario=${encodeURIComponent(usuario)}&contrasena=${encodeURIComponent(contrasena)}`,
     });
 
     if (response.ok) {
-      const data = await response.text();
-      alert(data); // Muestra el mensaje de éxito o error del inicio de sesión
+        // Si la respuesta es exitosa, pero la redirección ocurrió
+        if (response.redirected) {
+            window.location.href = response.url; // Redirige a la URL especificada por el servidor
+        } else {
+            const data = await response.text();
+            alert(data); // Muestra el mensaje de éxito o error del inicio de sesión
+        }
     } else {
       alert('Error al iniciar sesión');
     }
@@ -31,9 +31,6 @@ async function iniciarSesion() {
     console.error('Error:', error);
     alert('Error al iniciar sesión');
   }
-
-  console.log("Usuario:", usuario);
-  console.log("Contraseña encriptada:", hashedPassword);
 }
 
 document.getElementById('btnIniciarSesion').addEventListener('click', iniciarSesion);
